@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pirogramming-18th-django"
+version = "0.1.0"
+description = "피로그래밍 18기 Django Playground"
+authors = ["sudosubin <sudosubin@gmail.com>"]
+license = "UNLICENSED"
+readme = "README.md"
+packages = [{include = "config"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
