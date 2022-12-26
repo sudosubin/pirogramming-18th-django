@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 수정하기</title>
+</head>
+<body>
+    <a href="/">홈</a>
+   <form action="/post/{{ post.id }}/update/" method="post">
+        {% csrf_token %}
+        <h2>
+            <input type="text" name="title" placeholder="제목" value="{{ post.title }}">
+        </h2>
+        <p>
+            <input type="text" name="user" placeholder="유저" value="{{ post.user }}">
+            <input type="text" name="region" placeholder="지역" value="{{ post.region }}">
+						<input type="number" name="price" placeholder="가격" value="{{ post.price }}">
+        </p>
+        <textarea name="content" id="" cols="30" rows="10">{{ post.content }}</textarea>
+        <div>
+            <input type="submit" value="제출">
+        </div>
+   </form>
+</body>
+</html>

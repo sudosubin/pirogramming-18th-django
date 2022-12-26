@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세화면</title>
+</head>
+<body>
+    <a href="/">홈</a>
+    <a href="/post/{{ post.id }}/update/">수정하기</a>
+    <article>
+        <h2>
+            제목 : {{ post.title }}
+        </h2>
+        <p>
+            작성자: {{ post.user }}
+            지역: {{ post.region }}
+        </p>
+        <p>
+            {{ post.price }} 원
+        </p>
+        <div>
+            {{ post.content }}
+        </div>
+    </article>
+</body>
+</html>
