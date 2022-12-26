@@ -26,6 +26,32 @@ isort = "^5.11.4"
 mode = "poetry"
 pre-commit = ["autohooks.plugins.black", "autohooks.plugins.flake8", "autohooks.plugins.isort"]
 
+[tool.black]
+target-version = ["py310"]
+exclude = '''
+(
+    \.egg
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+)
+'''
+
+[tool.flake8]
+max-line-length = 88
+max-complexity = 12
+
+[tool.isort]
+profile = "black"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
